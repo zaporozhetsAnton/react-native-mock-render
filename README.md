@@ -1,5 +1,7 @@
 # react-native-mock-render
 
+Add ViewPropTypes
+
 A fork of [react-native-mock](https://github.com/RealOrangeOne/react-native-mock) that renders components
 
 ## Requirements

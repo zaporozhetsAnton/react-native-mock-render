@@ -1,5 +1,6 @@
 import EdgeInsetsPropType from '../propTypes/EdgeInsetsPropType';
 import React from 'react';
+import { ViewPropTypes } from 'react-native';
 import PropTypes from 'prop-types';
 import createReactClass from 'create-react-class';
 import View from './View';
@@ -20,9 +21,8 @@ const NavigationType = {
 const JSNavigationScheme = WebViewManager.JSNavigationScheme;
 
 const WebView = createReactClass({
-  displayName: 'WebView',
   propTypes: {
-    ...View.propTypes,
+    ...ViewPropTypes,
     url: PropTypes.string,
     html: PropTypes.string,
     /**
@@ -72,7 +72,7 @@ const WebView = createReactClass({
     contentInset: EdgeInsetsPropType,
     onNavigationStateChange: PropTypes.func,
     startInLoadingState: PropTypes.bool, // force WebView to show loadingView on first load
-    style: View.propTypes.style,
+    style: ViewPropTypes.style,
 
     /**
      * Used on Android only, JS is enabled by default for WebView on iOS

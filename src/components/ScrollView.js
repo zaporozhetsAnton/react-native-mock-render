@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { ViewPropTypes } from 'react-native';
 import createReactClass from 'create-react-class';
 import EdgeInsetsPropType from '../propTypes/EdgeInsetsPropType';
 import PointPropType from '../propTypes/PointPropType';
@@ -13,9 +14,8 @@ const SCROLLVIEW = 'ScrollView';
 const INNERVIEW = 'InnerScrollView';
 
 const ScrollView = createReactClass({
-  displayName: 'ScrollView',
   propTypes: {
-    ...View.propTypes,
+    ...ViewPropTypes,
     /**
      * Controls whether iOS should automatically adjust the content inset
      * for scroll views that are placed behind a navigation bar or
@@ -313,19 +313,8 @@ const ScrollView = createReactClass({
     );
   },
 
-  scrollTo(object) {
-    if (!this.props.onScroll) {
-      return;
-    }
+  scrollTo(destY = 0, destX = 0, animated = true) {
 
-    this.props.onScroll({
-      nativeEvent: {
-        contentOffset: {
-          x: object.x,
-          y: object.y,
-        },
-      },
-    });
   },
 
   render() {

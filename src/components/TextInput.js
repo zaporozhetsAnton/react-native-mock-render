@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { ViewPropTypes } from 'react-native';
 import createReactClass from 'create-react-class';
 import TextInputState from '../api/TextInputState';
 import TimerMixin from 'react-timer-mixin';
@@ -8,9 +9,8 @@ import View from './View';
 import Text from './Text';
 
 const TextInput = createReactClass({
-  displayName: 'TextInput',
   propTypes: {
-    ...View.propTypes,
+    ...ViewPropTypes,
     /**
      * Can tell TextInput to automatically capitalize certain characters.
      *

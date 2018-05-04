@@ -2,15 +2,15 @@
  * https://github.com/facebook/react-native/blob/master/Libraries/Components/ActivityIndicator/ActivityIndicatorIOS.ios.js
  */
 import React from 'react';
+import { ViewPropTypes } from 'react-native';
 import createReactClass from 'create-react-class';
 import PropTypes from 'prop-types';
 import NativeMethodsMixin from '../mixins/NativeMethodsMixin';
 import View from './View';
 
 const ActivityIndicatorIOS = createReactClass({
-  displayName: 'ActivityIndicatorIOS',
   propTypes: {
-    ...View.propTypes,
+    ...ViewPropTypes,
     /**
      * Whether to show the indicator (true, the default) or hide it (false).
      */

@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { ViewPropTypes } from 'react-native';
 import createReactClass from 'create-react-class';
 import createMockComponent from './createMockComponent';
 import View from './View';
@@ -26,7 +27,6 @@ const NavigatorSceneConfigs = {
 };
 
 const Navigator = createReactClass({
-  displayName: 'Navigator',
   propTypes: {
     /**
      * Optional function that allows configuration about scene animations and
@@ -90,7 +90,7 @@ const Navigator = createReactClass({
     /**
      * Styles to apply to the container of each scene
      */
-    sceneStyle: View.propTypes.style,
+    sceneStyle: ViewPropTypes.style,
 
     children: PropTypes.node
   },
